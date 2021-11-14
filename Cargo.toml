@@ -10,7 +10,7 @@ edition = "2018"
 env_logger = "0.9.0"
 log = "0.4.14"
 rand = "0.8.0"
-rppal = { version = "0.12.0", features = ["hal"] }
+rppal = { version = "0.13.1", features = ["hal"] }
 serde_json = "1.0"
 schedule_recv = "0.1"
 static_assertions = "1.1.0"

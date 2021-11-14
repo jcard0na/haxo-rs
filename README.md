@@ -73,16 +73,17 @@ RUST_LOG=debug cargo run
 You can run unit tests with `cargo test -- --test-threads=1`.  The tests cannot run in parallel as they will collide accessing hardware resources (GPIO, I2C bus, etc.).  The option `--test-threads=1` disables parallel execution of tests and forces them to run sequentially.
 
 ```
-running 7 tests
+running 8 tests
 test keyscan::tests::all_keys ... ignored
-test pressure::tests::pressure_step ... ignored
 test keyscan::tests::init ... ok
-test pressure::tests::read_io ... ignored
-test pressure::tests::init ... ok
-test pressure::tests::read ... ok
 test keyscan::tests::read ... ok
+test notemap::tests::update ... ok
+test pressure::tests::init ... ok
+test pressure::tests::pressure_step ... ignored
+test pressure::tests::read ... ok
+test pressure::tests::read_io ... ignored
 
-test result: ok. 4 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test result: ok. 5 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.02s
 ```
 
 Note that there are some ignored tests as well.  These are disabled by default
